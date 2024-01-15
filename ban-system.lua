@@ -8,7 +8,7 @@ local Players = game:GetService("Players")
 
 function check(player)
 	local HttpService = game:GetService("HttpService")
-	local url = "http://api-pegasus.hckrteam.com/v2/live"
+	local url = "http://api.pegasus.bot/v2/live"
 	
 	local requestHeaders = {
 		['Authorization'] = authkey
