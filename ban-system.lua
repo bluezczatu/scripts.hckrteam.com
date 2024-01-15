@@ -23,7 +23,7 @@ function check(player)
 	if success then
 		pcall(function()
 		local api = HttpService:JSONDecode(response.Body)
-
+		warn(api)
 		if api.success == true then
 			if api.data.temporaryban ~= nil then
 				for playerId, banReason in pairs(api.data.temporaryban) do
