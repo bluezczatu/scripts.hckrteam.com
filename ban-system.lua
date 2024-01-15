@@ -25,14 +25,14 @@ function check(player)
 		local api = HttpService:JSONDecode(response.Body)
 
 		if api.success == true then
-			if next(api.data.temporaryban) ~= nil then
+			if api.data.temporaryban ~= nil then
 				for playerId, banReason in pairs(api.data.temporaryban) do
 					pcall(function()
 						game.Players:GetPlayerByUserId(playerId):kick(banReason)
 					end)
 				end
 			end
-			if next(api.data.permanentban) ~= nil then
+			if api.data.permanentban ~= nil then
 				for playerId, banReason in pairs(api.data.permanentban) do
 					pcall(function()
 						game.Players:GetPlayerByUserId(playerId):kick(banReason)
