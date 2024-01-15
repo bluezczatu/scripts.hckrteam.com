@@ -1,5 +1,6 @@
 --PegasusLive
 --script na live bany
+warn("script na live bany")
 local Pegasus = require(script.Parent)
 local authkey = Pegasus.authkey
 
